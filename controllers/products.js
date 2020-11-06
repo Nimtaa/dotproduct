@@ -10,7 +10,7 @@ exports.list = function(req, res, next){
         if(err) throw err;
         Product.find({}, function(err, products){
             if(err) throw err;
-            console.log("product found")
+            console.log("product found");
             res.send(products);
             db.close();
         })
@@ -39,9 +39,25 @@ exports.create = function(req, res){
                     user.products.push(newProduct);
                     user.save(function(err){
                         if(err) throw err;
-                        db.close();
+                        // db.close();
                     })
                 }
+            })
+        }
+    })
+}
+
+exports.upvote = function(req, res, next){
+    const id = req.params.id;   
+    console.log('This is id:', id);
+    var query = {"_id": id};
+    Product.findOne(query, function(err, product){
+        if(err) throw err;
+        else{
+            console.log(product);
+            product.vote += 1;
+            product.save(function(err){
+                if(err) throw err;
             })
         }
     })

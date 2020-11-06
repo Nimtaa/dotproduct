@@ -20,11 +20,12 @@ class App extends Component{
 			<div className="App">
 				<ProductCard 
 				name={this.state.response.name}
-				description = {this.state.response.description}/>
+				description = {this.state.response.description}
+				vote = {this.state.response.vote}
+				_id = {this.state.response._id}/>
 			</div>
 		)
 	}
 
 }
-
 export default App;
