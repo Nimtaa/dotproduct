@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import ProductCard from './components/ProductCard';
 
 
-import './index.css';
+// import './index.css';
 import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductCard/>
+    <App/>
+    {/* <ProductCard/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

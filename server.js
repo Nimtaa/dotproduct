@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({
 // Configure the CORs middleware
 app.use(cors());
 
-app.use('/', productRouter);
+app.use('/products', productRouter);
 app.use('/users', userRouter);
 
 // This middleware informs the express application to serve our compiled React files

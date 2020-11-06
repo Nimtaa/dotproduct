@@ -21,8 +21,8 @@ class ProductCard extends Component{
             </Button>
             <Meta
               avatar={<img className="product-card-logo" src="../../logo192.png"/>}
-              title="نام محصول"
-              description = "توضیحات آن که در این زمینه کار‌های زیادی انجام می‌دهدو خیلی به شرکت شما کمک شایانی خواهد نمود"
+              title= {this.props.name}
+              description = {this.props.description}
             />
             
             </Card>

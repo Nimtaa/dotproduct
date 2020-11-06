@@ -8,9 +8,10 @@ const url = "mongodb://localhost:27017/dotproduct";
 exports.list = function(req, res, next){
     MongoClient.connect(url, {useNewUrlParser : true}, function(err, db){
         if(err) throw err;
-        User.find({}, function(err, docs){
+        User.find({}, function(err, users){
             if(err) throw err;
-            console.log(docs);
+            res.send(users);
+            db.close();
         })
     })
 }

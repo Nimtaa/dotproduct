@@ -1,22 +1,26 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+import ProductCard from './components/ProductCard';
+
 class App extends Component{
 	state = {
 		response: {}
 	};
 
 	componentDidMount(){
-		axios.get('/api/v1/say-something').then((res) =>{
-			const response = res.data
-			this.setState({response});
+		axios.get('/products').then((res) =>{
+			const data = res.data;
+			console.log(data)
+			this.setState({response: data[0]});
 		})
 	}
 	render(){
 		return (
 			<div className="App">
-				<h1>Hello </h1>
-				<h1>{this.state.response.body}</h1>
+				<ProductCard 
+				name={this.state.response.name}
+				description = {this.state.response.description}/>
 			</div>
 		)
 	}
