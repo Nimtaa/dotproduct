@@ -29,13 +29,13 @@
 #components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
     float: left;
 }
-.login-form-button {
+.registration-form-button{
     width: 100%;
     /* margin-top: 15px; */
     /* margin-bottom: 5px; */
 }
 
-.login-wrapper{
+.registration-wrapper{
     font-family: Shabnam;
     text-align: right;
     display: flex;
@@ -49,8 +49,4 @@
 /* not working correctly */
 #normal_login_password{
     padding-right: 4px !important;
-}
-
-.ant-checkbox-wrapper{
-    direction: rtl;
 }

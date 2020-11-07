@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Login from './components/Login';
+import Registration from './components/Registration';
 
 import reportWebVitals from './reportWebVitals';
 import ProductCard from './components/ProductCard';
@@ -13,7 +14,8 @@ import 'antd/dist/antd.css';
 ReactDOM.render(
   <React.StrictMode>
     {/* <App/> */}
-    <Login/>
+    {/* <Login/> */}
+    <Registration/>
     {/* <ProductCard/> */}
   </React.StrictMode>,
   document.getElementById('root')

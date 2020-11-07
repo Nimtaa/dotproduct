@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, Card } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 import axios from 'axios';
@@ -22,6 +22,7 @@ class Login extends Component{
     render(){
         return (
             <div className="login-wrapper">
+                <Card>
                 <Form
                 name="normal_login"
                 className="login-form"
@@ -35,7 +36,7 @@ class Login extends Component{
                     rules={[
                     {
                         required: true,
-                        message: 'لطفا نام کاربری را وارد فرمایید!',
+                        message: 'لطفا نام کاربری را وارد فرمایید',
                     },
                     ]}
                 >
@@ -46,7 +47,7 @@ class Login extends Component{
                     rules={[
                     {
                         required: true,
-                        message: 'لطفا رمز عبور را وارد فرمایید!',
+                        message: 'لطفا رمز عبور را وارد فرمایید',
                     },
                     ]}
                 >
@@ -63,6 +64,7 @@ class Login extends Component{
                     <Button type="primary" htmlType="submit" className="login-form-button" >
                     ورود
                     </Button>
+                    
                     <a href="">ثبت نام</a>
                 </Form.Item>
 
@@ -79,6 +81,7 @@ class Login extends Component{
             
               
                 </Form>
+                </Card>
             </div>
         );
     };
