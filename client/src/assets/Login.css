@@ -1,0 +1,52 @@
+@font-face{
+    font-family: Yekan;
+    src: url(../fonts/BYekan/BYekan+.ttf);
+}
+@font-face{
+    font-family: YekanBold;
+    src: url(../fonts/BYekan/BYekan+\ Bold.ttf);
+}
+@font-face{
+    font-family: ShabnamBold;
+    src: url(../fonts/shabnam-font-v4.0.0/Shabnam-Bold.ttf);
+}
+@font-face{
+    font-family: ShabnamLight;
+    src: url(../fonts/shabnam-font-v4.0.0/Shabnam-Light.woff);
+}
+@font-face{
+    font-family: Shabnam;
+    src: url(../fonts/shabnam-font-v4.0.0/Shabnam.ttf);
+}
+
+
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+    float: left;
+}
+.login-form-button {
+    width: 100%;
+    /* margin-top: 15px; */
+    /* margin-bottom: 5px; */
+}
+
+.login-wrapper{
+    font-family: Shabnam;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+#normal_login_username{
+    padding-right: 4px !important;
+}
+/* not working correctly */
+#normal_login_password{
+    padding-right: 4px !important;
+}
